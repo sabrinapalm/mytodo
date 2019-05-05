@@ -1,13 +1,14 @@
 @charset "UTF-8";
 
 :root {
-  --main-accent-color: #df4d19;
+  --main-accent-color: #7045af;
 
 }
 
 body {
-  background: #232323;;
-  padding: 60px 0 0 0;
+  background: #222831;
+  padding: 0px;
+  margin: 0px;
 }
 
 body, input, button {
@@ -25,20 +26,20 @@ h2 {
 }
 
 header {
-  width: 100%;
-  position: fixed;
-  padding: 10px;
+  width: 100%; */
   top: 0;
+  right: 0;
   left: 0;
   z-index: 5;
   background: var(--main-accent-color);
   box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+  overflow: hidden;
 }
 
 header input {
   width: 100%;
   height: 50px;
-  color: #fff;
+  color: #eeeeee;
   font-size: 15px;
   font-weight: 400;
   text-indent: 18px;
@@ -47,7 +48,6 @@ header input {
   border: 0px;
   box-shadow: none;
   outline: none;
-  border-radius: 4px;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -69,11 +69,11 @@ header input:-ms-input-placeholder {
 }
 
 header button {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   position: absolute;
-  top: 15px;
-  right: 34px;
+  top: 5px;
+  right: 10px;
   z-index: 2;
   border-radius: 25px;
   background: #fff;
@@ -109,9 +109,10 @@ ul {
 }
 
 ul.todo {
-  width: 100%;
   list-style-type: none;
+  margin-top: 90px;
 }
+
 
 ul.todo li {
   font-size: 13px;
@@ -122,7 +123,7 @@ ul.todo li {
     position: relative;
     box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
     margin: 0 0 10px 0;
-    padding: 15px 100px 15px 15px;
+    padding: 15px;
 }
 
 ul.todo li .buttons {
@@ -153,16 +154,9 @@ ul.todo li .buttons button {
 ul.todo li .buttons button svg {
   width: 20px;
   height: 20px;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  margin: -11px 0 0 -11px;
 }
 
 ul.todo li .buttons button.complete svg {
-  border-radius: 100px;
   border: 1px solid var(--main-accent-color);
   transition: background 0.2s ease;
 }
@@ -200,28 +194,25 @@ ul.todo li .buttons button.complete svg .fill {
   fill: var(--main-accent-color);
 }
 
+
 ul.todo#completed {
   position: relative;
   padding: 0px 0 0 0;
+  list-style-type: none;
+  margin-top: 0px;
 }
 
-/* ul.todo#completed:before {
-  content: '';
-  width: 150px;
+ul.todo#todo {
+  position: relative;
+  padding: 10px 0 0 0;
+  list-style-type: none;
+  margin-top: 0px;
+}
+
+
+.separator {
   height: 1px;
-  background:rgba(255, 255, 255, 0.1);
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  margin: 0 0 0 -75px;
-} */
-
-
-ul.todo#todo:after,
-ul.todo#completed:after {
-  width: 100%;
-  display: block;
-  text-align: center;
-  font-size: 12px;
-  color: #aaa;
+  background-color: #eaeff530;
+  width: 95px;
+  margin: 20px auto;
 }
